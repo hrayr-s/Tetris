@@ -1,0 +1,15 @@
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tetris.exe.config
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tetris.exe
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tetris.pdb
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.FreeGlut.dll
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.OpenGl.dll
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.Platform.Windows.dll
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.FreeGlut.xml
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.OpenGl.xml
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Release\Tao.Platform.Windows.xml
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.debug.resources
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.Form1.resources
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.Properties.Resources.resources
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.csproj.GenerateResource.Cache
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.exe
+e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.pdb
