@@ -13,3 +13,23 @@ e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\T
 e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.csproj.GenerateResource.Cache
 e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.exe
 e:\users\hrayr\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Release\Tetris.pdb
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tetris.exe.config
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tetris.exe.manifest
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tetris.application
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tetris.exe
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tetris.pdb
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tao.FreeGlut.xml
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tao.OpenGl.xml
+C:\Users\User\source\repos\Tetris\Tetris\bin\Release\Tao.Platform.Windows.xml
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.debug.resources
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.Form1.resources
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.Properties.Resources.resources
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.exe.manifest
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.application
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.csproj.CopyComplete
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.exe
+C:\Users\User\source\repos\Tetris\Tetris\obj\Release\Tetris.pdb

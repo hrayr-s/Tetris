@@ -61,3 +61,19 @@ H:\Users\Hrayr\Cloud Mail.Ru\Hrayr\Projects\Tetris\Tetris\obj\Debug\Tetris.cspro
 H:\Users\Hrayr\Cloud Mail.Ru\Hrayr\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.CopyComplete
 H:\Users\Hrayr\Cloud Mail.Ru\Hrayr\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
 H:\Users\Hrayr\Cloud Mail.Ru\Hrayr\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tao.FreeGlut.xml
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tao.OpenGl.xml
+C:\Users\User\Source\Repos\Tetris\Tetris\bin\Debug\Tao.Platform.Windows.xml
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.debug.resources
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.Form1.resources
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.csproj.CopyComplete
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\User\Source\Repos\Tetris\Tetris\obj\Debug\Tetris.pdb
