@@ -25,8 +25,9 @@ namespace Tetris
             STATE_ROWS_ARE_CLEAR = 6, // Տողերը մաքրված են
             FIGURES_QUANTITY = 3, // Ֆիգուրաների քանակը
             HASH_TABLE_WIDTH = 15, // Մատրիցայի Երկարությունը
-            GUI_MARGIN = 2, // Ինտերֆեյսի ձախից բացվածքը :D
             HASH_TABLE_HEIGHT = 20; // Մատրիցայի բարձրությունը
+        public const double GUI_MARGIN = 1; // Ինտերֆեյսի ձախից բացվածքը :D
+
         public int
             lowest_row = 0, // Ամենացածր ջնջված տողը 
             state = 0, // Խաղի կարգավիճակ
@@ -42,11 +43,20 @@ namespace Tetris
         private bool
             clear_row = false,  // ջնջել տողը
             changeFigure = true; // փոխել ֆիգուրան
-        private bool[] figureNav = new bool[3]; // Figure navidation 0 - Left, 1 - Right, 2 - Bottom
+        private bool[] figureNav = new bool[3]; // Figure navigation 0 - Left, 1 - Right, 2 - Bottom
+
+        private Size window_size;
+
         Random rnd = new Random();
-        public game()
+        public game(Size window_size)
         {
             this.state = STATE_PLAYING;
+            this.window_size = window_size;
+        }
+
+        public void setWindowSize(Size window_size)
+        {
+            this.window_size = window_size;
         }
 
         public void play()
@@ -87,21 +97,29 @@ namespace Tetris
             score = 0;
         }
 
+        public void drawBorders()
+        {
+            /**
+             * Draws game main border.
+             */
+            figures.drawRec(0, this.window_size.Height * 10, (HASH_TABLE_WIDTH * figures.multiplier), (HASH_TABLE_HEIGHT * figures.multiplier) - this.window_size.Height);
+            //figures.drawRec(0, this.window_size.Height - 1, HASH_TABLE_WIDTH * figures.multiplier, this.window_size.Height - (HASH_TABLE_HEIGHT * figures.multiplier));
+        }
+
         public void draw(bool clearingrows = false)
         {
-
-            figures.drawRec(-0.5, HASH_TABLE_HEIGHT + 5.5, HASH_TABLE_WIDTH + 3.5, 0);
+            this.drawBorders();
             for (int i = 0; i < HASH_TABLE_WIDTH; i++)
             {
                 for (int j = 0; j <= HASH_TABLE_HEIGHT; j++)
                 {
                     if (this.hashTable[i, j] == 1)
-                        figures.drawRec(i * 1.2, j * 1.2, i * 1.2 + 1, j * 1.2 + 1);
+                        figures.drawRec(i * figures.multiplier, j * figures.multiplier, i * figures.multiplier + 1, j * figures.multiplier + 1);
                 }
             }
             if (!clearingrows)
                 drawFigure();
-            figures.drawtext("Score: "+this.score,5, GUI_MARGIN + HASH_TABLE_WIDTH + 5, HASH_TABLE_HEIGHT);
+            figures.drawtext("Score: "+this.score,5, (int)Math.Floor(GUI_MARGIN) + HASH_TABLE_WIDTH + 5, HASH_TABLE_HEIGHT);
             
         }
 
@@ -109,15 +127,29 @@ namespace Tetris
         {
             switch (currentFigure[0])
             {
-                case 0: // Erankyuni
+                case 0: // T-Block
                     figures.drawTriangle(currFigurePosition[0], currFigurePosition[1], currentFigure[1]);
                     break;
-                case 1: // Քառակուսի
+                case 1: // O-Block
                     figures.drawBox(currFigurePosition[0], currFigurePosition[1], currentFigure[1]);
                     break;
-                case 2: // Լ
+                case 2: // J-Block
                     figures.drawL(currFigurePosition[0], currFigurePosition[1], currentFigure[1]);
                     break;
+                    // TODO remaining blocks
+                    /**
+                     *  I-block
+	                        ***
+                        L-Block
+	                          *
+	                        ***
+                        S-block
+	                         **
+	                        **
+                        Z-Block
+	                        **
+	                         **
+                     */
             }
         }
 
@@ -154,17 +186,16 @@ namespace Tetris
         public void calculate()
         {
 
-            Thread.Sleep(100);
             if (this.state == game.STATE_PLAYING)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 this.checkHashTable();
                 if (figureNav[2])
                     currFigurePosition[1]++;
             }
             if (this.state == STATE_CLEARING_ROWS)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(30);
                 if (ilik >= 0) hashTable[ilik, this.rows_to_remove[curr_row]] = 0;
                 if (ilik > 0 && rows_to_remove[curr_row] != 0)
                     ilik--;
@@ -219,26 +250,6 @@ namespace Tetris
 
             this.rows_to_remove = hashtabcheck.HashTable(ref hashTable, ref clear_row);
             if (clear_row) { this.state = STATE_CLEARING_ROWS; curr_row = 0; }
-        }
-        
-        public bool drawRec(double x1, double y1, double x2, double y2)
-        {
-            if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0)
-                return false;
-
-            // активируем режим рисования линий на основе 
-            // последовательного соединения всех вершин в отрезки 
-            // устанавливаем текущий цвет - красный 
-            Gl.glColor3f(255, 0, 0);
-            Gl.glBegin(Gl.GL_LINE_LOOP);
-            Gl.glVertex2d(x1, y1);
-            Gl.glVertex2d(x1, y2);
-            Gl.glVertex2d(x2, y2);
-            Gl.glVertex2d(x2, y1);
-            // завершаем режим рисования
-            Gl.glEnd();
-
-            return true;
         }
     }
 }

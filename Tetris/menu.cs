@@ -15,7 +15,7 @@ using System.Drawing.Imaging;
 
 namespace Tetris
 {
-    class menu
+    class menu 
     {
         public int selitem = 2,
             lastcoord = 0;
@@ -49,7 +49,7 @@ namespace Tetris
 
         public void draw()
         {
-            for (int i = 2, j = 0; i <= 13; i += 3, j++)
+            for (int i = 2, j = 0; i <= 13; i += 5, j++)
             {
 
                 if (selitem == j)
@@ -57,7 +57,6 @@ namespace Tetris
                 else
                     figures.drawtext(menulist[j], menulist[j].Length, 2, i);
                 figures.drawMenuRec(2, i, menulist[j].Length * 12);
-                i += 2;
             }
         }
     }

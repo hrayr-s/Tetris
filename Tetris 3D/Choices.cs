@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tetris
+{
+    public enum FigurePose
+    {
+        Top,
+        Left,
+        Bottom,
+        Right,
+    }
+
+    public enum FiguresTypes
+    {
+        TBlock,
+        OBlock,
+        LBlock,
+        JBlock,
+        SBlock,
+        ZBlock,
+    }
+}

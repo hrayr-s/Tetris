@@ -15,6 +15,7 @@ namespace Tetris
 {
     class figures
     {
+        public static readonly double multiplier = 1.2;
         public static void drawTriangle(int x, int y, int dirq = 0)
         {
             int x1 = 0, x2 = 0, x3 = 0, x4 = 0, y1 = 0, y2 = 0, y3 = 0, y4 = 0;
@@ -61,10 +62,10 @@ namespace Tetris
                     y4 = y - 1;
                     break;
             }
-            figures.drawRec(x1 * 1.2, y1 * 1.2, x1 * 1.2 + 1, y1 * 1.2 + 1);
-            figures.drawRec(x2 * 1.2, y2 * 1.2, x2 * 1.2 + 1, y2 * 1.2 + 1);
-            figures.drawRec(x3 * 1.2, y3 * 1.2, x3 * 1.2 + 1, y3 * 1.2 + 1);
-            figures.drawRec(x4 * 1.2, y4 * 1.2, x4 * 1.2 + 1, y4 * 1.2 + 1);
+            figures.drawFillRec(x1 * figures.multiplier, y1 * figures.multiplier, x1 * figures.multiplier + 1, y1 * figures.multiplier + 1);
+            figures.drawFillRec(x2 * figures.multiplier, y2 * figures.multiplier, x2 * figures.multiplier + 1, y2 * figures.multiplier + 1);
+            figures.drawFillRec(x3 * figures.multiplier, y3 * figures.multiplier, x3 * figures.multiplier + 1, y3 * figures.multiplier + 1);
+            figures.drawFillRec(x4 * figures.multiplier, y4 * figures.multiplier, x4 * figures.multiplier + 1, y4 * figures.multiplier + 1);
         }
 
         public static void drawBox(int x, int y, int dirq = 0)
@@ -78,10 +79,10 @@ namespace Tetris
             y2 = y;
             y3 = y + 1;
             y4 = y + 1;
-            figures.drawRec(x1 * 1.2, y1 * 1.2, x1 * 1.2 + 1, y1 * 1.2 + 1);
-            figures.drawRec(x2 * 1.2, y2 * 1.2, x2 * 1.2 + 1, y2 * 1.2 + 1);
-            figures.drawRec(x3 * 1.2, y3 * 1.2, x3 * 1.2 + 1, y3 * 1.2 + 1);
-            figures.drawRec(x4 * 1.2, y4 * 1.2, x4 * 1.2 + 1, y4 * 1.2 + 1);
+            figures.drawFillRec(x1 * figures.multiplier, y1 * figures.multiplier, x1 * figures.multiplier + 1, y1 * figures.multiplier + 1);
+            figures.drawFillRec(x2 * figures.multiplier, y2 * figures.multiplier, x2 * figures.multiplier + 1, y2 * figures.multiplier + 1);
+            figures.drawFillRec(x3 * figures.multiplier, y3 * figures.multiplier, x3 * figures.multiplier + 1, y3 * figures.multiplier + 1);
+            figures.drawFillRec(x4 * figures.multiplier, y4 * figures.multiplier, x4 * figures.multiplier + 1, y4 * figures.multiplier + 1);
         }
 
         public static void drawL(int x, int y, int dirq = 0)
@@ -130,10 +131,10 @@ namespace Tetris
                     y4 = y - 1;
                     break;
             }
-            figures.drawRec(x1 * 1.2, y1 * 1.2, x1 * 1.2 + 1, y1 * 1.2 + 1);
-            figures.drawRec(x2 * 1.2, y2 * 1.2, x2 * 1.2 + 1, y2 * 1.2 + 1);
-            figures.drawRec(x3 * 1.2, y3 * 1.2, x3 * 1.2 + 1, y3 * 1.2 + 1);
-            figures.drawRec(x4 * 1.2, y4 * 1.2, x4 * 1.2 + 1, y4 * 1.2 + 1);
+            figures.drawFillRec(x1 * figures.multiplier, y1 * figures.multiplier, x1 * figures.multiplier + 1, y1 * figures.multiplier + 1);
+            figures.drawFillRec(x2 * figures.multiplier, y2 * figures.multiplier, x2 * figures.multiplier + 1, y2 * figures.multiplier + 1);
+            figures.drawFillRec(x3 * figures.multiplier, y3 * figures.multiplier, x3 * figures.multiplier + 1, y3 * figures.multiplier + 1);
+            figures.drawFillRec(x4 * figures.multiplier, y4 * figures.multiplier, x4 * figures.multiplier + 1, y4 * figures.multiplier + 1);
         }
 
 
@@ -183,10 +184,10 @@ namespace Tetris
                     y4 = y - 1;
                     break;
             }
-            figures.drawRec(x1 * 1.2, y1 * 1.2, x1 * 1.2 + 1, y1 * 1.2 + 1);
-            figures.drawRec(x2 * 1.2, y2 * 1.2, x2 * 1.2 + 1, y2 * 1.2 + 1);
-            figures.drawRec(x3 * 1.2, y3 * 1.2, x3 * 1.2 + 1, y3 * 1.2 + 1);
-            figures.drawRec(x4 * 1.2, y4 * 1.2, x4 * 1.2 + 1, y4 * 1.2 + 1);
+            figures.drawFillRec(x1 * figures.multiplier, y1 * figures.multiplier, x1 * figures.multiplier + 1, y1 * figures.multiplier + 1);
+            figures.drawFillRec(x2 * figures.multiplier, y2 * figures.multiplier, x2 * figures.multiplier + 1, y2 * figures.multiplier + 1);
+            figures.drawFillRec(x3 * figures.multiplier, y3 * figures.multiplier, x3 * figures.multiplier + 1, y3 * figures.multiplier + 1);
+            figures.drawFillRec(x4 * figures.multiplier, y4 * figures.multiplier, x4 * figures.multiplier + 1, y4 * figures.multiplier + 1);
         }
 
         public static bool drawRec(double x1, double y1, double x2, double y2)
@@ -195,21 +196,28 @@ namespace Tetris
             x2 += game.GUI_MARGIN;
             if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0)
                 return false;
-            // активируем режим рисования линий на основе 
-            // последовательного соединения всех вершин в отрезки 
-            // устанавливаем текущий цвет - красный 
             Gl.glColor3f(255, 0, 0);
             Gl.glBegin(Gl.GL_LINE_LOOP);
             Gl.glVertex2d(x1, y1);
             Gl.glVertex2d(x1, y2);
             Gl.glVertex2d(x2, y2);
-            Gl.glVertex2d(x2, y1);
-            // завершаем режим рисования 
+            Gl.glVertex2d(x2, y1); 
             Gl.glEnd();
 
             return true;
         }
 
+        public static bool drawFillRec(double x1, double y1, double x2, double y2)
+        {
+            x1 += game.GUI_MARGIN;
+            x2 += game.GUI_MARGIN;
+            //if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0)
+                //return false;
+            Gl.glColor3f(255, 0, 0);
+            Gl.glRectd(x1, y1, x2, y2);
+
+            return true;
+        }
 
 
         public static void drawText(string text, float x, float y, bool selected = false)
@@ -277,7 +285,7 @@ namespace Tetris
 
         }
 
-        public static void drawtext(string text, int length,int x, int y, bool selected = false)
+        public static void drawtext(string text, int length, int x, int y, bool selected = false)
         {
             double[] matrix = new double[16];
             length = text.Length;

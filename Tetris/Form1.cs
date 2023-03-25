@@ -43,47 +43,35 @@ namespace Tetris
             AnT.InitializeContexts();
             men = new menu(ref gamestate);
             // Разворачиваем окно;
-            this.WindowState = FormWindowState.Maximized;
+            // this.WindowState = FormWindowState.Maximized;
+            this.ScreenMode(true);
         }
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            // инициализация библиотеки GLUT 
             Glut.glutInit();
-            // инициализация режима окна 
             Glut.glutInitDisplayMode(Glut.GLUT_RGB | Glut.GLUT_DOUBLE);
 
-            // устанавливаем цвет очистки окна 
             Gl.glClearColor(255, 255, 255, 1);
 
-            // устанавливаем порт вывода, основываясь на размерах элемента управления AnT 
             Gl.glViewport(0, 0, AnT.Width, AnT.Height);
 
-            // устанавливаем проекционную матрицу
             Gl.glMatrixMode(Gl.GL_PROJECTION);
 
-            // очищаем ее 
             Gl.glLoadIdentity();
-
-            // теперь необходимо корректно настроить 2D ортогональную проекцию 
-            // в зависимости от того, какая сторона больше 
-            // мы немного варьируем то, как будут сконфигурированы настройки проекции 
+            
             if (AnT.Width <= AnT.Height)
                 Glu.gluOrtho2D(0.0, 30.0, 0.0, 30.0 * (float)AnT.Height / (float)AnT.Width);
             else
                 Glu.gluOrtho2D(0.0, 30.0 * (float)AnT.Width / (float)AnT.Height, 0.0, 30.0);
 
-            // переходим к объектно-видовой матрице 
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
 
-            // ! Включаем тектстурирование
             Gl.glEnable(Gl.GL_TEXTURE_2D);
 
             thewindowwidth = AnT.Width;
 
-            // ! Включаем смешивание
             Gl.glEnable(Gl.GL_BLEND);
             Gl.glBlendFunc(Gl.GL_SRC_ALPHA, Gl.GL_ONE_MINUS_SRC_ALPHA);
 
@@ -101,7 +89,7 @@ namespace Tetris
                         if (!gameLoaded)
                         {
                             if (this.game == null)
-                                this.game = new Tetris.game();
+                                this.game = new Tetris.game(this.gameDrawSize());
                             if (!this.gameLoaded)
                                 this.gameLoaded = true;
                         }
@@ -115,46 +103,28 @@ namespace Tetris
             this.FormBorderStyle = FormBorderStyle.None;
         }
 
-        // Смена режима (Fullscreen/Window)
+        // Change window mode (Fullscreen/Window)
         private void ScreenMode(bool fullscreen)
         {
-            // Присваиваем значение "глобальной" переменной;
             FS = fullscreen;
-
             if (FS)
-            {   // *** ПОЛНОЭКРАННЫЙ РЕЖИМ ***
-                // Скрываем рамку окна;
+            {
                 this.FormBorderStyle = FormBorderStyle.None;
-                // Разворачиваем окно;
                 this.WindowState = FormWindowState.Maximized;
-                // --- Не обязательный пункт --- 
-                // Делаем курсор в форме руки;
                 // TaoWin.Cursor = Cursors.Hand;
             }
             else
-            {   // *** ОКОННЫЙ РЕЖИМ ***
-                // Возвращаем состояние окна;
+            {
                 this.WindowState = FormWindowState.Normal;
-                // Показываем масштабируемую рамку окна;
                 this.FormBorderStyle = FormBorderStyle.Sizable;
-                // --- Не обязательный пункт ---
-                // Возвращаем курсор по-умолчанию;
-                // TaoWin.Cursor = Cursors.Default;
-                // Задаем размеры окна;
-                this.Width = 1280;   // Ширина;
-                this.Height = 720;  // Высота;
+                this.Width = 1280;
+                this.Height = 720;
             }
-            //form1sizechanged();
         }
 
         public void draw()
         {
-
-
-            // очищаем буфер цвета 
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
-
-            // очищаем текущую матрицу 
             Gl.glLoadIdentity();
         
             if (gamestate != game.STATE_PLAYING && this.view == "menu")
@@ -176,42 +146,37 @@ namespace Tetris
                 }
 
             }
-            //men.drawText(rndx.Next(0, 2) + "Su", 10,  10);
-
             Gl.glFlush();
-            // дожидаемся конца визуализации кадра 
-
-            // посылаем сигнал перерисовки элемента AnT. 
             AnT.Invalidate();
         }
 
         private void form1sizechanged(object sender, EventArgs e)
         {
-            // инициализация режима окна 
             Glut.glutInitDisplayMode(Glut.GLUT_RGB | Glut.GLUT_DOUBLE);
+            AnT.Size = new System.Drawing.Size(this.Width, this.Height);
 
-            // устанавливаем цвет очистки окна 
             Gl.glClearColor(255, 255, 255, 1);
 
-            // устанавливаем порт вывода, основываясь на размерах элемента управления AnT 
             Gl.glViewport(0, 0, AnT.Width, AnT.Height);
 
-            // устанавливаем проекционную матрицу 
             Gl.glMatrixMode(Gl.GL_PROJECTION);
-            // очищаем ее 
             Gl.glLoadIdentity();
 
-            // теперь необходимо корректно настроить 2D ортогональную проекцию 
-            // в зависимости от того, какая сторона больше 
-            // мы немного варьируем то, как будут сконфигурированы настройки проекции 
             if (AnT.Width <= AnT.Height)
                 Glu.gluOrtho2D(0.0, 30.0, 0.0, 30.0 * (float)AnT.Height / (float)AnT.Width);
             else
                 Glu.gluOrtho2D(0.0, 30.0 * (float)AnT.Width / (float)AnT.Height, 0.0, 30.0);
 
-            // переходим к объектно-видовой матрице 
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
-            //MessageBox.Show("Forma "+ilik);
+            if (gameLoaded)
+            {
+                this.game.setWindowSize(this.gameDrawSize());
+            }
+        }
+
+        private Size gameDrawSize()
+        {
+            return new Size(this.Size.Width / this.AnT.LogScaleX, this.Size.Height / this.AnT.LogScaleY);
         }
 
         private void refreshtimer_Tick(object sender, EventArgs e)
